@@ -1,0 +1,8 @@
+* Install
+Scripts to set up new computers.
+** ./home-bin
+   Scripts that go in ~/.bin. Usually utility scripts that aren't in package
+   repositories.
+** Everything else
+   See the README files elsewhere in this project for information about nearby
+   files.

@@ -1,0 +1,3 @@
+* [[https://www.archlinux.org/][Arch Linux]].
+  `arch/packages` (as root) will install most packages I use on an Arch Linux
+  System.
