@@ -40,6 +40,7 @@ _install_bin_script https://raw.githubusercontent.com/holman/spark/master/spark
 # dmenu-custom (script to open websites/programs in a terminal from dmenu)
 _install_bin_script https://raw.githubusercontent.com/losingkeys/dmenu-custom/master/dmenu-custom
 
-boot_version="2.2.0"
+# get the latest version number from the latest release's tag name on GitHub
+boot_version="$(curl -s https://api.github.com/repos/boot-clj/boot/releases/latest | grep tag_name -m1 | cut -d\" -f4)"
 # boot (clojure build tool)
 _install_bin_script "https://github.com/boot-clj/boot/releases/download/$boot_version/boot.sh" boot
