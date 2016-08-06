@@ -1,3 +1,5 @@
+# -*- conf -*-
+
 arandr
 chromium
 dmenu
@@ -8,18 +10,22 @@ gnome-calculator
 gnome-dictionary
 gnome-icon-theme
 gnome-themes-standard
+intellij-idea-community-edition
+intellij-idea-libs
 numlockx
-oxygen-gtk3
 recordmydesktop
 scrot
 thunar
 transmission-gtk
+ttf-inconsolata
+ttf-inconsolata
+ttf-liberation
 ttf-symbola
+urxvt-perls
 vlc
 xchat
 xclip
 xfce4-notifyd
-xloadimage
 xloadimage
 xlockmore
 xmonad
@@ -28,8 +34,10 @@ xorg-server
 xorg-xbacklight
 xorg-xinit
 xorg-xkill
+xorg-xlsfonts # needed by urxvt-font-size-git
 xorg-xmessage
 xorg-xmodmap
+xorg-xprop
 xorg-xrdb
 xorg-xset
 xorg-xsetroot

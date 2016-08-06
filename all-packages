@@ -1,0 +1,17 @@
+#!/bin/sh
+
+scriptFolder="$(dirname "$0")"
+. "$scriptFolder/helper-functions/system-detection/detect"
+
+# install packages specific to the detected OS
+find "$scriptFolder/$OS/" -type f -executable | while read -r installer
+do
+  # the only argument is 'cli', if you don't want to install GUI packages
+  "$scriptFolder/for-installer" "$(basename "$installer")" "$1"
+done
+
+# install common packages
+find "$scriptFolder/common/" -type f -executable | while read -r installer
+do
+  "$scriptFolder/for-installer" "$(basename "$installer")" "$1"
+done

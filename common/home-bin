@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# install misc scripts to ~/.bin/
+
+installTo="$HOME/.bin/"
+
+if [ ! -e "$installTo" ]; then
+  mkdir "$installTo"
+fi
+
+# shellcheck disable=2048
+for url in $*; do
+  file="${url##*/}"
+  path="$installTo$file"
+
+  if [ ! -e "$path" ]; then
+    curl -sL "$url" -o "$path"
+    chmod +x "$path"
+  fi
+done

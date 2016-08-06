@@ -1,0 +1,27 @@
+#!/bin/sh
+
+scriptFolder="$(dirname "$0")"
+
+_get_package_names() {
+  osOrCommon="$1"
+  installer="$2"
+  gui="$3"
+
+  packageNames=""
+
+  if [ -r "$scriptFolder/$osOrCommon/package-names/$installer" ]
+  then
+    packageNames="$(_rm_comments_normalize_spaces "$scriptFolder/$osOrCommon/package-names/$installer")"
+
+    guiPackages="$scriptFolder/$osOrCommon/package-names/$installer-gui"
+    if [ "$gui" ] && [ -r "$guiPackages" ]; then
+      packageNames="$packageNames $(_rm_comments_normalize_spaces "$guiPackages")"
+    fi
+  fi
+
+  echo "$packageNames"
+}
+
+_rm_comments_normalize_spaces() {
+  cut -d# -f1 "$1" | tr '[:space:]' ' '
+}

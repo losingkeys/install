@@ -1,8 +1,27 @@
 * Install
-Scripts to set up new computers.
-** ./home-bin
-   Scripts that go in ~/.bin. Usually utility scripts that aren't in package
-   repositories.
-** Everything else
-   See the README files elsewhere in this project for information about nearby
-   files.
+  Package install scripts for various installers.
+** Usage
+   To install all packages[fn:1] your OS supports[fn:2]:
+   #+BEGIN_SRC sh
+sudo ./all-packages
+   #+END_SRC
+
+   To install /only/ packages not requiring a GUI:
+   #+BEGIN_SRC sh
+sudo ./all-packages cli
+   #+END_SRC
+
+   To install packages for a specific installer:
+   #+BEGIN_SRC sh
+sudo ./for-installer <installer> [cli]
+   #+END_SRC
+
+   To see which installers are supported, look at the executable scripts in your
+   OS' folder, and the =common/= folder.
+* Footnotes
+
+[fn:1] Installs OS-specific packages first, because those might install more
+package managers.
+
+[fn:2] All install scripts get package names from a file named after themselves
+in the nearby =package-names/= folder.

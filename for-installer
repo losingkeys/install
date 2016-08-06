@@ -1,0 +1,31 @@
+#!/bin/sh
+
+scriptFolder="$(dirname "$0")"
+. "$scriptFolder/helper-functions/system-detection/detect"
+. "$scriptFolder/helper-functions/get-package-names"
+
+installer="$1"
+installScript="$scriptFolder/$OS/$installer"
+
+# assume GUI
+gui="$(test "$2" != cli && echo gui)"
+
+if [ -x "$installScript" ]
+then
+  packageNames="$(_get_package_names "$OS" "$installer" "$gui")"
+  $installScript "$packageNames"
+
+  exit 0
+fi
+
+installScript="$scriptFolder/common/$installer"
+if [ -x "$installScript" ]
+then
+  packageNames="$(_get_package_names common "$installer" "$gui")"
+  $installScript "$packageNames"
+
+  exit 0
+fi
+
+echo "Could not find '$installer' installer for '$OS' OS" 1>&2
+exit 1

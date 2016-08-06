@@ -1,0 +1,3 @@
+[submodule "helper-functions/system-detection"]
+	path = helper-functions/system-detection
+	url = https://github.com/losingkeys/system-detection

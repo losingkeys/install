@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# shellcheck disable=2048,2086
+sudo pacman --quiet --sync --noconfirm --needed --color=auto $*

@@ -1,0 +1,28 @@
+# -*- conf -*-
+
+# rfc (displays RFCs)
+https://gist.githubusercontent.com/losingkeys/3902455/raw/rfc
+
+# boot (clojure build tool)
+https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh
+
+# spark (makes graphs in the shell)
+https://raw.githubusercontent.com/holman/spark/master/spark
+
+# cljs-watch (compiles clojurescript files)
+https://raw.githubusercontent.com/ibdknox/cljs-watch/master/cljs-watch
+
+# dmenu-custom (script to open websites/programs in a terminal from dmenu)
+https://raw.githubusercontent.com/losingkeys/dmenu-custom/master/dmenu-custom
+
+# dmenu-track-time (track your time when working on projects)
+https://raw.githubusercontent.com/losingkeys/dmenu-track-time/master/dmenu-track-time
+
+# gibo (outputs .gitignore templates)
+https://raw.githubusercontent.com/simonwhitaker/gibo/master/gibo
+
+# ghi (shows github issues for a project)
+https://raw.githubusercontent.com/stephencelis/ghi/master/ghi
+
+# lein (used for clojure project management)
+https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
