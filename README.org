@@ -1,4 +1,4 @@
-* Install
+* install-packages
   Package install scripts for various installers.
 ** Usage
    To install all packages[fn:1] your OS supports[fn:2]:
@@ -17,7 +17,7 @@
    #+END_SRC
 
    To see which installers are supported, look at the executable scripts in your
-   OS' folder, and the =common/= folder.
+   OS' folder (e.g. =linux/=), and the =common/= folder.
 * Footnotes
 
 [fn:1] Installs OS-specific packages first, because those might install more
