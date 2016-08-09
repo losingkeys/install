@@ -6,6 +6,9 @@ for package in $*; do
   tar xvf "$package.tar.gz"
 
   cd "$package"
+  # FIXME requires sudo. Find a way to only need to enter your password once.
+  #  You'll likely need it twice (once for pacman, and (if that takes longer
+  #  than 5 minutes), once for this/aur)
   makepkg --syncdeps --rmdeps --needed --install --noconfirm
 
   cd ..

@@ -3,17 +3,17 @@
 ** Usage
    To install all packages[fn:1] your OS supports[fn:2]:
    #+BEGIN_SRC sh
-sudo ./all-packages
+./all-packages # you likely will be asked for your password
    #+END_SRC
 
    To install /only/ packages not requiring a GUI:
    #+BEGIN_SRC sh
-sudo ./all-packages cli
+./all-packages cli
    #+END_SRC
 
    To install packages for a specific installer:
    #+BEGIN_SRC sh
-sudo ./for-installer <installer> [cli]
+./for-installer <installer> [cli]
    #+END_SRC
 
    To see which installers are supported, look at the executable scripts in your
